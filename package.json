@@ -1,9 +1,54 @@
 {
+  "name": "sampleapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A sample React application for demonstration purposes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,css,html}",
+    "prepare": "husky install" // Ensure this line is present
+  },
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "express": "^4.21.1",
-    "mongoose": "^8.7.2"
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "prettier": "^2.8.8",
+    "husky": "^8.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
